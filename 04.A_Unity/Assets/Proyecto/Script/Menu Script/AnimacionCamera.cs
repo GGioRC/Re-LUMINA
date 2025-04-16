@@ -16,7 +16,7 @@ public class AnimacionCamera : MonoBehaviour
     [field: Space(5f)]
     [field: SerializeField] EventListener ReceptorOpcion1 { get; set; }
     [field: SerializeField] EventListener ReceptorOpcion2 { get; set; }
-    [field: SerializeField] EventListener ReceptorOpcion3 { get; set; }
+    // [field: SerializeField] EventListener ReceptorOpcion3 { get; set; }
 
     void Awake()
     {
@@ -31,14 +31,14 @@ public class AnimacionCamera : MonoBehaviour
         ReceptorRegresarMenu.AddAction(ReiniciarAnimacion);
         ReceptorOpcion1.AddAction(ReproducirOpcion1);
         ReceptorOpcion2.AddAction(ReproducirOpcion2);
-        ReceptorOpcion3.AddAction(ReproducirOpcion3);
+        // ReceptorOpcion3.AddAction(ReproducirOpcion3);
     }
     void OnDestroy()
     {
         ReceptorRegresarMenu.RemoveAction(ReiniciarAnimacion);
         ReceptorOpcion1.RemoveAction(ReproducirOpcion1);
         ReceptorOpcion2.RemoveAction(ReproducirOpcion2);
-        ReceptorOpcion3.RemoveAction(ReproducirOpcion3);
+        // ReceptorOpcion3.RemoveAction(ReproducirOpcion3);
     }
 
     void ReiniciarAnimacion() => Animator.SetTrigger(IdReiniciarAnimacion);
